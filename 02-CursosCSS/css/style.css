@@ -40,12 +40,12 @@ p {
   color: midnightblue;
 }
 
-/* Dar estilos con Id se considera un AntiPatrón */
+/* Dar estilos con Id se considera un AntiPatrón. */
 #parrafo-dos {
   background-color: skyblue;
 }
 
-/* Dar estilos con clases nos permite reutilizar nuestro código CSS */
+/* Dar estilos con clases nos permite reutilizar nuestro código CSS. */
 .bg-skyblue {
   background-color: skyblue;
 }
@@ -74,57 +74,65 @@ p {
   background-color: thistle;
 }
 
-/* Los selectores de hermanos van a aplicar a los elementos que son hermanos y que estén por debajo del elemento de referencia */
+/* Los selectores de hermanos van a aplicar a los elementos que son hermanos y que estén por debajo del elemento de referencia. */
 .hermanos-general ~ li {
+  /* Aplica a todos lo elementos li debajo del elemento con la clase .hermanos-general. */
   background-color: thistle;
 }
 
-.hermanos-adyacentes + li {
+.hermanos-adyacentes + li { 
+/* Aplica solo al primer elemento li debajo del elemento con la clase .hermanos-adyacentes. */
   background-color: thistle;
 }
 
 /* Selectores de atributos */
-.selectores-atributos a[href] {
+.selectores-atributos a[href] { 
+/* Aplica a los elementos <a> que contengan el atributo href que sean hijos de un elemento con la clase selectores-atributos. */
   color: orangered;
 }
 
 .selectores-atributos a[target="_blank"] {
+  /* Aplica a los elementos <a> que contengan el atributo target con el valor "_blank" que sean hijos de un elemento con la clase selectores-atributos. */
   font-weight: bold;
 }
 
-/* El comodín del * aplica el estilo si contiene el texto en cuestión en cualquier parte */
 .selectores-atributos a[href*="jonmircha"] {
+  /* Aplica a los elementos <a> que tengan el atributo href y que en su valor contengan la cadena "jhonmircha" en cualquier parte, y que sean hijos de un elemento con la clase selectores-atributos. */
   font-size: 24px;
 }
 
-/* El comodín del ^ aplica el estilo si contiene el texto en cuestión al inicio */
+/* Siguiendo con la logica anterior para no escribir tantos comentarios.*/
+
+/* El comodín del ^ aplica el estilo si contiene el texto en cuestión al inicio.*/
 .selectores-atributos a[href^="http://"]
 {
-  text-decoration: none;
+  /* Modifica el subrayado, puede cambiar color, posicion, etc. En este caso lo elimina.*/
+  text-decoration: none; 
 }
 
-/* El comodín del $ aplica el estilo si contiene el texto en cuestión al final */
+/* El comodín del $ aplica el estilo si contiene el texto en cuestión al final. */
 .selectores-atributos a[href$=".com"] {
   background-color: black;
 }
 
-/* El comodín del ~ aplica el estilo si contiene el texto en cuestión en una lista separada por espacios */
+/* El comodín del ~ aplica el estilo si contiene el texto en cuestión en una lista separada por espacios. No solo las clases se pueden agrupar como una sola cadena y separadas por espacios, hay otros atributos que pueden hacer lo mismo. Por lo tanto, si queremos seleccionar un valor de ese atributo lo haremos de esta forma. Si no comple esta sintaxis, no usarlo. */
 .selectores-atributos a[class~="cursos"] {
   background-color: midnightblue;
 }
 
-/* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que despues del texto en cuestión venga un guión medio - */
+/* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que despues del texto en cuestión venga un guión medio - (Seguir la logica anterior). */
 .selectores-atributos a[class|="menu"] {
   font-style: italic;
 }
 
 /* Selector Universal */
 * {
-  font-family: sans-serif;
+  font-family: sans-serif; /* Aplica el estilo de fuente a todos los elementos. */
 }
 
-.selector-universal * {
-  font-size: 24px;
+.selector-universal * { 
+/* Aplica el estilo a todos los elementos dentro del elemento con la clase selector-universal. */
+  font-size: 45px;
 }
 
 /* 
