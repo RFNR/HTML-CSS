@@ -7,13 +7,13 @@ body {
 }
 
 h1 {
-  color: navy;
+  color: green;
 }
 
 img,
 video {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Esto hace que el ancho de las imagenes sea de toda la pantalla y no sea mas grande.*/
+  height: auto; /* Para que no se deforme la imagen, la altura sera automatica dependiendo del ancho. */
 }
 
 iframe {
