@@ -42,6 +42,7 @@
   <h3>Temario del Curso</h3>
   <!-- ul>li*18>a -->
   <ul>
+    <!--Indice con links internos identificados por el id-->
     <li><a href="index.html#encabezados">Encabezados HTML</a></li>
     <li><a href="index.html#textos-basicos">Etiquetas de Texto Básicas</a></li>
     <li><a href="index.html#textos-semanticos">Etiquetas de Texto Semánticas</a></li>
@@ -77,7 +78,7 @@
   <h5>Encabezado de nivel 5</h5>
   <h6>Encabezado de nivel 6</h6>
   <br>
-  <a href="index.html#inicio">☝️</a>
+  <a href="index.html#inicio">☝️</a><!--Emoji sacado de https://emojipedia.org/es/ solo buscar, copiar y pegar. Como los emojis son textos planos, no pasa nada.-->
   <hr>
   <h2 id="textos-basicos">Etiquetas de Texto Básicas</h2>
   <p>Un párrafo</p>
@@ -498,17 +499,21 @@
     </svg>
   </a>
   <br>
-  <a href="mailto:hola@jonmircha.com">Enlace a correo electrónico</a>
+  <a href="mailto:hola@jonmircha.com">Enlace a correo electrónico</a> <!--Al hacer click, te abre la aplicacion de mensajeria con el correo especificado de destinatario listo para escribir el asunto y  el mensaje.-->
   <br>
-  <a href="tel:5215512345678">Enlace a télefono</a>
+  <a href="tel:5215512345678">Enlace a télefono</a><!--Te pone el numero listo para llamar si lo abris desde el celular-->
   <br>
-  <a href="https://api.whatsapp.com/send?phone=5215512345678&text=Hola">Enlace hacia WhatsApp</a>
+  <a href="https://api.whatsapp.com/send?phone=5493425050133&text=Hola&nbsp;Ford">Enlace hacia WhatsApp</a> <!--Te lleva al enlace de whatsapp con el texto "Hola"-->
   <br>
   <a href="index.html#inicio">☝️</a>
   <hr>
   <h2 id="elementos-interactivos">Elementos Interactivos</h2>
   <button onclick="alert('Hola haz clickeado el botón')">Este es un botón</button>
   <br><br>
+  <!--https://developer.mozilla.org/es/docs/Web/HTML/Element/details#:~:text=El%20elemento%20HTML%20Details%20%3Cdetails,usuario%20puede%20obtener%20informaci%C3%B3n%20adicional%20.&text=Contenido%20din%C3%A1mico%20%2C%20contenido%20de%20seccionamiento%2C%20contenido%20interactivo%2C%20contenido%20palpable%20.
+  https://www.htmlquick.com/es/reference/tags/details.html
+  https://www.htmlquick.com/es/reference/tags/summary.html
+-->
   <details>
     <summary>Título del Acordeón</summary>
     <article>
@@ -523,7 +528,7 @@
     </article>
   </details>
   <br>
-  <details open>
+  <details open> <!--Este acordeon carga abieerto por defecto por el atributo open-->
     <summary>Título del Acordeón</summary>
     <article>
       <h3>Contenido del Acordeón</h3>
@@ -536,6 +541,9 @@
         voluptates earum numquam! Deleniti vitae illum alias sequi aspernatur magnam quo quaerat reiciendis.</p>
     </article>
   </details>
+  <!--https://developer.mozilla.org/es/docs/Web/HTML/Element/dialog
+      https://www.htmlquick.com/es/reference/tags/dialog.html
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog  traducir esta ultima pagina porque tiene mas ejemplos que la de español-->
   <dialog open>
     Esto es una ventana modal en HTML
   </dialog>
@@ -543,23 +551,37 @@
   <a href="index.html#inicio">☝️</a>
   <hr>
   <h2 id="audio-video">Audio y Video</h2>
+  <!--
+    https://programacion.net/articulo/entendiendo_el_tag_audio_de_html_5_2155#:~:text=Introducido%20en%20HTML%2C%20el%20tag,por%20todos%20los%20navegadores%20modernos.
+    https://developer.mozilla.org/es/docs/Web/HTML/Element/audio
+    https://www.htmlquick.com/es/reference/tags/audio.html
+    https://developer.mozilla.org/es/docs/Web/HTML/Element/video
+    https://www.htmlquick.com/es/reference/tags/video.html
+    https://www.htmlquick.com/es/reference/tags/source.html
+  -->
   <audio src="media/Feels-PatrickPatrikios.mp3" controls preload></audio>
   <br>
   <video src="media/kenai.mp4" controls preload poster="img/puesta-sol.jpg"></video>
   <br>
   <a href="index.html#inicio">☝️</a>
+  <!--
+    https://developer.mozilla.org/es/docs/Web/HTML/Element/iframe
+    https://keepcoding.io/blog/la-etiqueta-iframe-en-html/
+    https://www.htmlquick.com/es/reference/tags/iframe.html
+  -->
   <h2 id="iframes">Iframes</h2>
   <iframe src="hola.html" frameborder="1"></iframe>
   <br>
-  <iframe src="https://jonmircha.com" frameborder="1"></iframe>
+  <iframe src="https://www.ionos.es/digitalguide/" frameborder="1"></iframe>
   <br>
-  <iframe src="https://facebook.com" frameborder="1"></iframe>
+  <iframe src="https://www.rtve.es/play/cine/" frameborder="1"></iframe>
   <br>
   <iframe src="media/emmet-cheat-sheet.pdf" frameborder="1"></iframe>
   <br>
+  <!--No todas las paginas se pueden llamar como iframes, por cuestiones de seguridad.-->
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.6654003373211!2d-99.16814652076648!3d19.427021863930683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses-419!2smx!4v1625355039715!5m2!1ses-419!2smx"
-    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> <!--Google maps te permite compartir ubicaciones para ponerlas como defecto en el iframe como en este caso. Solo hay que compartir -> incorporar un mapa y copiar el codigo html.-->
   <br>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/F55LNTW3GE0" title="YouTube video player"
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -567,7 +589,7 @@
   <br>
   <a href="index.html#inicio">☝️</a>
   <hr>
-  <h2 id="formularios">Formularios</h2>
+  <h2 id="formularios">Formularios</h2> <!--Ver la seccion de formularios en el html.-->
   <h3>Elementos de Formularios</h3>
   <input type="text">
   <br>
@@ -589,7 +611,7 @@
   <br>
   <input type="file" multiple>
   <br>
-  <input type="hidden" name="idioma" value="es">
+  <input type="hidden" name="idioma" value="es"> <!--Buscar este input.-->
   <br>
   <input type="email">
   <br>
@@ -601,9 +623,19 @@
   <br>
   <input type="search">
   <br>
+  <!--
+    https://developer.mozilla.org/es/docs/Web/HTML/Element/textarea
+    https://www.htmlquick.com/es/reference/tags/textarea.html
+    Tambien ver esta etiqueta en el doc html
+  -->
   <textarea cols="50" rows="5"></textarea>
   <br>
-  <select name="" id="">
+  <!--
+    Ver  etiqueta select en el doc html.
+    https://www.freecodecamp.org/espanol/news/etiqueta-select-de-html-como-hacer-un-menu-desplegable-o-lista-combinada/
+    https://www.htmlquick.com/es/reference/tags/select.html
+  -->
+  <select name="" id=""> 
     <option value="">HTML</option>
     <option value="">CSS</option>
     <option value="">JS</option>
@@ -628,7 +660,7 @@
   <form action="https://jonmircha.com/" method="POST" autocomplete="off">
     <label for="usuario">Usuario: </label>
     <input type="text" name="usuario" id="usuario" placeholder="Escribe tu usuario" pattern="^[A-Za-z]+$"
-      title="El campo sólo acepta letras" required>
+      title="El campo sólo acepta letras" required> <!--Investigar sobre pattern-->
     <br>
     <!-- <input type="text" name="email" autocomplete="off"> -->
     <label for="password">Password: </label>

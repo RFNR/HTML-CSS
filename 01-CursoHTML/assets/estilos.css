@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*Esto es para el efecto de desplazamiento en los enlaces internos. Si no me mostraria la seccion de contenido a la que quiero ir de golpe.*/
 }
 
 body {
