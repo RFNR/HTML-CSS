@@ -481,12 +481,17 @@
   <h2 id="enlaces">Enlaces</h2><!--Ver enlaces en el documento-->
   <a href="hola.html">Hacia la página Hola</a>
   <br>
-  <!--https://es.semrush.com/blog/enlaces-nofollow/
+  <!--
+    Leer estos enlaces cuando tengas tiempo: 
+      https://es.semrush.com/blog/enlaces-nofollow/
       https://developers.google.com/search/blog/2019/09/evolving-nofollow-new-ways-to-identify?hl=es-419
       https://es.ryte.com/wiki/Nofollow
+    Leerlos si o si:
       https://comocreartuweb.com/curso-de-html/curso-html-introducion/los-enlaces/el-target.html
       https://www.manualweb.net/html/enlaces-html/
   -->
+  <a href="https://www.manualweb.net/" title="Web de Manuales y Tutoriales de Programación">Ir a Manual Web</a> <!--Observar el comportamiento del atributo title -> solo en pc -->
+  <br>
   <a href="https://jonmircha.com" target="_blank" rel="nofollow">Visita mi sitio web jonmircha.com</a>
   <br>
   <a href="https://jonmircha.com/cursos" target="_blank">
@@ -510,6 +515,12 @@
   <a href="index.html#inicio">☝️</a>
   <hr>
   <h2 id="elementos-interactivos">Elementos Interactivos</h2>
+  <!--
+    https://www.htmlquick.com/es/reference/tags/button-button.html
+    https://www.freecodecamp.org/espanol/news/ejemplos-de-codigo-de-enlaces-de-botones-html-como-crear-hipervinculos-html-usando-el-atributo-href-en-las-etiquetas/
+    https://sites.google.com/site/dwebhtml/reference/tags/button
+    https://www.youtube.com/watch?v=NsmiagyzKS4
+  -->
   <button onclick="alert('Hola haz clickeado el botón')">Este es un botón</button>
   <br><br>
   <!--https://developer.mozilla.org/es/docs/Web/HTML/Element/details#:~:text=El%20elemento%20HTML%20Details%20%3Cdetails,usuario%20puede%20obtener%20informaci%C3%B3n%20adicional%20.&text=Contenido%20din%C3%A1mico%20%2C%20contenido%20de%20seccionamiento%2C%20contenido%20interactivo%2C%20contenido%20palpable%20.
@@ -530,7 +541,7 @@
     </article>
   </details>
   <br>
-  <details open> <!--Este acordeon carga abieerto por defecto por el atributo open-->
+  <details open> <!--Este acordeon carga abierto por defecto por el atributo open-->
     <summary>Título del Acordeón</summary>
     <article>
       <h3>Contenido del Acordeón</h3>
@@ -557,6 +568,7 @@
     https://programacion.net/articulo/entendiendo_el_tag_audio_de_html_5_2155#:~:text=Introducido%20en%20HTML%2C%20el%20tag,por%20todos%20los%20navegadores%20modernos.
     https://developer.mozilla.org/es/docs/Web/HTML/Element/audio
     https://www.htmlquick.com/es/reference/tags/audio.html
+    https://www.htmlquick.com/es/reference/tags/track.html
     https://developer.mozilla.org/es/docs/Web/HTML/Element/video
     https://www.htmlquick.com/es/reference/tags/video.html
     https://www.htmlquick.com/es/reference/tags/source.html
@@ -587,7 +599,7 @@
   <br>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/F55LNTW3GE0" title="YouTube video player"
     frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
+    allowfullscreen></iframe><!--Si el atributo allowfullscreen esta presente, el video no se puede poner en pantalla completa. Esta opcion viene desactivada.-->
   <br>
   <a href="index.html#inicio">☝️</a>
   <hr>
