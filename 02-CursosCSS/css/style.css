@@ -37,12 +37,12 @@ Selectores Básicos
 */
 
 p {
-  color: midnightblue;
+  color: midnightblue; /* Cambia el color de la letra. */
 }
 
 /* Dar estilos con Id se considera un AntiPatrón. */
 #parrafo-dos {
-  background-color: skyblue;
+  background-color: skyblue; /* Cambia el color de fondo. Este se muestra en la zona que ocupan el contenido y el padding del elemento, justo hasta su borde sin incluirlo. */
 }
 
 /* Dar estilos con clases nos permite reutilizar nuestro código CSS. */
@@ -55,7 +55,7 @@ p {
 }
 
 .text-20 {
-  font-size: 20px;
+  font-size: 20px; /* Establece el tamaño de letra. https://www.youtube.com/watch?v=DgOLVMzGzpE&t=330s */
 }
 
 .text-32 {
@@ -91,9 +91,13 @@ p {
   color: orangered;
 }
 
+/* https://www.youtube.com/watch?v=MW4OrqLsH6k
+   https://www.youtube.com/watch?v=cvdEU4OIHyU
+*/
+
 .selectores-atributos a[target="_blank"] {
   /* Aplica a los elementos <a> que contengan el atributo target con el valor "_blank" que sean hijos de un elemento con la clase selectores-atributos. */
-  font-weight: bold;
+  font-weight: bold; /* https://www.youtube.com/watch?v=r3hBCCS97wA */
 }
 
 .selectores-atributos a[href*="jonmircha"] {
@@ -122,12 +126,13 @@ p {
 
 /* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que despues del texto en cuestión venga un guión medio - (Seguir la logica anterior). */
 .selectores-atributos a[class|="menu"] {
-  font-style: italic;
+  font-style: italic; /* https://www.youtube.com/watch?v=fRICVavvDSE&t=5s */
 }
 
 /* Selector Universal */
 * {
   font-family: sans-serif; /* Aplica el estilo de fuente a todos los elementos. */
+  /* https://uniwebsidad.com/libros/referencia-css2/font-family En la parte donde dice que fantasy es parecido a comic sans e impac, hay un error. Fantasy solo se parece a impact.*/
 }
 
 .selector-universal * { 
@@ -140,8 +145,10 @@ Pseudoclases - Dan estilos dependiendo del contexto, posición o estado del elem
 https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 */
 
+/* Pseudoclases de estado */
+
 .form-pseudoclases *:required {
-  border-color: yellow;
+  border-color: yellow; /* https://uniwebsidad.com/libros/referencia-css2/border-color */
 }
 
 .form-pseudoclases *:valid {
@@ -175,6 +182,8 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 #temario-css:target {
   background-color: lightgreen;
 }
+
+/*  Pseudoclases por posición y tipo */
 
 .lista-pseudoclases li:first-child {
   color: green;
@@ -220,9 +229,11 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
   background-color: beige;
 }
 
-/*
-Pseudoelementos - Dan estilos a partes específicas de un elemento, se usa el :: para diferenciarlos de las pseudoclases
+/* 
+Pseudoelementos 
+Dan estilos a partes específicas de un elemento, se usa el :: para diferenciarlos de las pseudoclases
 https://developer.mozilla.org/es/docs/Web/CSS/Pseudoelementos
+https://developer.mozilla.org/es/docs/Web/CSS/content
 */
 
 .saga-geminis::before {
