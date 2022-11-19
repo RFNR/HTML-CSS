@@ -37,12 +37,12 @@ Selectores Básicos
 */
 
 p {
-  color: midnightblue; /* Cambia el color de la letra. */
+  color: midnightblue; /* Cambia el color de la letra. https://uniwebsidad.com/libros/css/capitulo-3/colores */
 }
 
 /* Dar estilos con Id se considera un AntiPatrón. */
 #parrafo-dos {
-  background-color: skyblue; /* Cambia el color de fondo. Este se muestra en la zona que ocupan el contenido y el padding del elemento, justo hasta su borde sin incluirlo. */
+  background-color: skyblue; /* Cambia el color de fondo. Este se muestra en la zona que ocupan el contenido y el padding del elemento, justo hasta su borde sin incluirlo. https://uniwebsidad.com/libros/referencia-css2/background-color */
 }
 
 /* Dar estilos con clases nos permite reutilizar nuestro código CSS. */
@@ -93,11 +93,12 @@ p {
 
 /* https://www.youtube.com/watch?v=MW4OrqLsH6k
    https://www.youtube.com/watch?v=cvdEU4OIHyU
+   https://www.youtube.com/watch?v=r3hBCCS97wA 
 */
 
 .selectores-atributos a[target="_blank"] {
   /* Aplica a los elementos <a> que contengan el atributo target con el valor "_blank" que sean hijos de un elemento con la clase selectores-atributos. */
-  font-weight: bold; /* https://www.youtube.com/watch?v=r3hBCCS97wA */
+  font-weight: bold; /* https://developer.mozilla.org/es/docs/Web/CSS/font-weight */
 }
 
 .selectores-atributos a[href*="jonmircha"] {
@@ -111,7 +112,7 @@ p {
 .selectores-atributos a[href^="http://"]
 {
   /* Modifica el subrayado, puede cambiar color, posicion, etc. En este caso lo elimina.*/
-  text-decoration: none; 
+  text-decoration: none;  /* https://developer.mozilla.org/es/docs/Web/CSS/text-decoration */
 }
 
 /* El comodín del $ aplica el estilo si contiene el texto en cuestión al final. */
@@ -144,6 +145,8 @@ p {
 Pseudoclases - Dan estilos dependiendo del contexto, posición o estado del elemento
 https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 */
+
+/* https://developer.mozilla.org/es/docs/Web/CSS/Class_selectors */
 
 /* Pseudoclases de estado */
 
@@ -277,15 +280,30 @@ https://developer.mozilla.org/es/docs/Web/CSS/content
 .form-agrupar-selectores input[type="email"],
 .form-agrupar-selectores textarea {
   border-color: yellow;
-  border-width: 2px;
+  border-width: 2px; 
+  /* 
+  https://developer.mozilla.org/es/docs/Web/CSS/border-width#:~:text=La%20propiedad%20border%2Dwidth%20define%20el%20ancho%20del%20borde.&text=valor%20calculado%20%3A%20largo%20absoluto%20o,none%27)%20o%20%27hidden%27. 
+  https://uniwebsidad.com/libros/referencia-css2/border-width */
   border-style: dashed;
+  /* https://uniwebsidad.com/libros/referencia-css2/border-style */
   background-color: black;
   font-size: 20px;
   display: block;
+  /* https://uniwebsidad.com/libros/css-avanzado/capitulo-4/propiedad-display
+     https://developer.mozilla.org/es/docs/Web/CSS/display */
   width: 300px;
+  /*
+  https://developer.mozilla.org/es/docs/Web/CSS/width
+  https://developer.mozilla.org/en-US/docs/Web/CSS/width
+  https://uniwebsidad.com/libros/referencia-css2/width
+  https://es.khanacademy.org/computer-programming/css-width-height-and-overflow/5631904855621632
+  */
 }
 
 /* 
+
+https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance
+
 El Algoritmo de CSS: Es la forma en que el navegador aplica los estilos al documento HTML. Es vital entender este concepto para que entiendas como se aplican y en algunas ocasiones se sobreescriben las reglas CSS.
   1) La Cascada.
   2) La Especificidad.
