@@ -327,6 +327,8 @@ La Especificidad es el peso que tiene un selector cuando hay conflicto de estilo
 La Herencia, es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, para aplicarla se usa el valor inherit, si queremos evitarla podemos asignar otro valor o inicializar la propiedad en cuestión con el valor initial
 
 https://web.dev/learn/css/inheritance/#which-properties-are-inheritable
+https://uniwebsidad.com/libros/css/capitulo-2/herencia
+https://uniwebsidad.com/libros/css/capitulo-2/colisiones-de-estilos
 */
 
 blockquote#cita-marco.cita-marco {
@@ -384,3 +386,5 @@ Prefijos de los navegadores
 -ms-user-select: none;
 user-select: none;
 */
+
+/* el curso sigue en box-model.html */
