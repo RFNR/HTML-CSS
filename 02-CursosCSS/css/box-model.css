@@ -1,5 +1,7 @@
 /* 
 https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/El_modelo_de_caja
+https://developer.mozilla.org/es/docs/Web/CSS/CSS_Box_Model#:~:text=El%20modelo%20de%20caja%20CSS,al%20modelo%20de%20formato%20visual.
+https://es.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/pt/css-box-model
 
 Modelo de Caja: Es la forma en que CSS ve a los elementos HTML y ¿cómo los ve? como si fueran cajas con las siguientes propiedades:
   1. El contenido (content): El contenido (texto) del elemento HTML, tomando en cuanta sus dimensiones (width & height)
@@ -14,15 +16,18 @@ Dentro del modelo de caja hay que considerar que una caja tendrá 4 lados:
   4. Izquierda (left)
 */
 
+/* https://cssreference.io/ --> consultar aqui cuando no conoza un estilo.*/
+
 h1 {
-  width: 400px;
-  height: 200px;
+  width: 400px; /* Ancho */
+  height: 200px; /* Alto */
+  /* Estas dos ultimos estilos aplican solamente al elemento. El padding, borde y margin no se ven afectados por esto. */
   /* propiedades de tipo shorthand */
-  border-color: green;
+  border-color: green; 
   border-top-color: red;
-  border-width: thick; /* thin - 1px , medium - 3px, thick - 5px */
+  border-width: thick; /* thin = 1px , medium = 3px, thick = 5px */
   border-style: solid;
-  border: 2px dashed blue;
+  border: 2px dashed blue; /* Este estilo resume y reemplaza los 4 estilos anteriores por cascada. Se usa dependiendo las necesidades*/
 }
 
 .caja-uno,
@@ -67,6 +72,10 @@ Caja de Bloque
   - No permiten otros elementos a su lado (aunque especifique un ancho, siguen ocupando todo el espacio disponible a lo ancho, generando saltos de línea).
 */
 
+/* https://dev.to/lupitacode/la-propiedad-display-en-css-1b6a 
+   https://cssreference.io/property/display/
+*/
+
 .caja-linea,
 .caja-bloque {
   background-color: darkcyan;
@@ -92,7 +101,7 @@ Propiedad Display
   inline
   block
   inline-block - Se comporta como un elemento de línea pero acepta modificar sus dimensiones (alto y ancho)
-  none
+  none --> oculta el contenido, pero se carga. No es recomendable para ocultar videos porque se seguirian cargando en segundo plano.
   table
   list-item
   flex - ve mi curso de Flexbox CSS
@@ -116,9 +125,15 @@ Propiedad Display
   display: none;
 }
 
+/* https://uniwebsidad.com/libros/referencia-css2/visibility */
+
 .caja-hidden {
   visibility: hidden;
 }
+
+/* https://uniwebsidad.com/libros/referencia-css2/overflow 
+   https://developer.mozilla.org/es/docs/Web/CSS/overflow#:~:text=La%20propiedad%20CSS%20overflow%20especifica,bloques%20(en%2DUS).
+*/
 
 .overflow {
   background-color: darkturquoise;
@@ -134,6 +149,11 @@ Propiedad Display
 
 /* 
 Tamaño de Caja
+*/
+
+/* 
+https://dev.to/lupitacode/que-es-el-box-sizing-en-css-2pi9 
+https://developer.mozilla.org/es/docs/Web/CSS/box-sizing
 */
 
 .box-sizing-content,
@@ -159,6 +179,12 @@ Tamaño de Caja
   margin-top: 20px;
 }
 
+/* 
+  https://uniwebsidad.com/libros/referencia-css2/float 
+  https://cssreference.io/property/float/
+  https://www.codifica.me/solucionar-problemas-de-altura-en-elementos-float-css/
+*/
+
 .container-col-3 > * {
   box-sizing: border-box;
   width: 200px;
@@ -183,7 +209,7 @@ html {
 
 /* Floats */
 .container-floats {
-  background-color: cornflowerblue;
+  background-color: cornflowerblue; 
 }
 
 .float-left {
@@ -194,11 +220,26 @@ html {
   float: right;
 }
 
+/* Observar que el color de fondo no se aplica al elemento con la clase container-floats que contiene a los elementos de las clases float-left y float-right.Esto pasa porque al flotar los elementos que la contienen, y no especificar un ancho y un alto, es como si el elemento estuviera vacio. Es como si quitara los elementos pero si estan ahi. Por lo tanto, el color no se muestra en la pantalla. Una solucion a esto es aplicar la propiedad overflow: hidden a container-floats, como ya se explico anteriormente en los links vistos. */
+
+/* 
+  https://uniwebsidad.com/libros/referencia-css2/clear 
+  https://developer.mozilla.org/es/docs/Web/CSS/clear
+  https://cssreference.io/property/clear/
+*/ 
 .clearfix {
   clear: both;
 }
 
+/* https://elcssar.com/css/problema-float */ 
+
 /* Colapso de Márgenes Verticales */
+
+/* 
+  https://uniwebsidad.com/libros/css/capitulo-4/margen-y-relleno 
+  https://dev.to/lupitacode/entendiendo-el-colapso-de-margenes-margin-collapsing-4oj6#:~:text=%22En%20CSS%2C%20los%20m%C3%A1rgenes%20adyacentes,resultante%20se%20denomina%20margen%20colapsado.%22
+  Ver video de jhon mircha 7:21:55 hasta el final de la seccion. Y la proxima seccion completa.
+*/
 .margin-collapse {
   background-color: skyblue;
 }
@@ -216,6 +257,11 @@ html {
   margin-left: 16px;
 }
 
+/*
+  https://developer.mozilla.org/es/docs/Web/HTML/Inline_elements
+  https://uniwebsidad.com/libros/referencia-css2/text-align
+*/
+
 /* Centrado de Cajas */
 .sitio-web {
   border: thin solid black;
@@ -224,7 +270,14 @@ html {
   height: 1000px;
   padding: 16px;
   margin-top: 200px;
+  /*Centrado de caja --> El valor auto toma los pixeles sobrantes de un lado y los reparte en el otro de forma que en ambos lados haya la misma cantidad de pixeles.
+  https://developer.mozilla.org/es/docs/Web/CSS/margin
+  https://www.hongkiat.com/blog/css-margin-auto/
+  */
   margin-left: auto;
   margin-right: auto;
-  /* margin: 0 auto; */
+  /* margin: 0 auto; == margin: auto; */
+  text-align: center;
 }
+
+/* Sigue en positions.html */
