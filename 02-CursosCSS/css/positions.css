@@ -1,5 +1,12 @@
 /*
+https://developer.mozilla.org/es/docs/Web/CSS/position
+
 Posicionamiento CSS
+  Antes de leer el siguiente enlace.. 
+  Al usar unidades en porcentajes, estas hacen refencia al tamaño de la caja que los contiene. Por ejemplo en el ejemplo 2, si ponemos un top del 50%, la caja hija se mueve un 50% de la altura de la caja. Pero siempre queda dentro del contenedor padre. Si usamos pixeles.. puede salir pero mantiene su lugar en la pagina.
+  https://uniwebsidad.com/libros/referencia-css2/min-height
+  En el ejemplo 1 de absolute esta mal. Agregar top: 0 y left: 0 a la caja 1 porque esta incompleto.
+  https://dev.to/lupitacode/guia-completa-y-practica-sobre-posicionamiento-css-fundamentos-17c
 
   La propiedades FLOAT y POSITION nos permiten modificar la posición natural de cualquier elemento del documento HTML.
 
@@ -39,6 +46,7 @@ Posicionamiento CSS
 }
 
 /* relative: El elemento conserva sus dimensiones y posición original en el flujo del documento. Si se mueve toma como referencia su posición original */
+/* Ver esta seccion completa en youtube.*/
 .relative {
   background-color: turquoise;
   position: relative;
@@ -57,6 +65,7 @@ Posicionamiento CSS
 /* absolute: El elemento pierde sus dimensiones y posición original en el flujo del documento. Si se mueve puede tomar como referencia 2 elementos:
   1) El primer ancestro con posicionamiento relativo
   2) Si no encuentra un ancestro relativo, se mueve respecto del documento HTML */
+/* Ver esta seccion completa en youtube.*/
 .absolute {
   background-color: tomato;
   position: absolute;
@@ -91,6 +100,7 @@ Posicionamiento CSS
 }
 
 /* fixed: El elemento pierde sus dimensiones y posición original en el flujo del documento. Si se mueve toma como referencia el documento HTML y queda fijo en la posición, cuando el scroll se mueva, el elemento no lo hará, queda FIJO */
+/* Ver esta seccion completa en youtube.*/
 .fixed {
   background-color: lightgreen;
   position: fixed;
@@ -105,6 +115,7 @@ Posicionamiento CSS
 /* sticky: es un combinación de posicionamiento relative y fixed, para este posicionamiento las propiedades de top, left, bottom y right no mueven el elemento, sirven como un punto de referencia, mientras no lleguen a ese valor el elemento se comporta como relative, cuando llega se convierte en fixed
 
 Para que este comportamiento funcione el elemento sticky debe ser hijo directo del body o su elemento contenedor debe tener dimensiones definidas y sólo será sticky dentro de las dimensiones de su contenedor padre. */
+/* Ver esta seccion completa en youtube.*/
 .sticky {
   background-color: lightskyblue;
   position: sticky;
@@ -126,7 +137,7 @@ Para que este comportamiento funcione el elemento sticky debe ser hijo directo d
 
 A mayor valor el elemento esta más al frente, a menor valor más al fondo.
 
-Un elemento padre nunca podrá estar sobre sus elementos hijos, sin embargo los elementos hijos si pueden dándoles un valor negativo y que el elemento padre no tenga definido valor de z-index */
+Un elemento padre nunca podrá estar sobre sus elementos hijos, sin embargo los elementos hijos si pueden estar detras del padre dándoles un valor negativo y que el elemento padre no tenga definido valor de z-index, o sea quitar la propiedad z-index del elemento padre.*/
 .z-index-1,
 .z-index-2 {
   background-color: mediumaquamarine;
@@ -165,3 +176,5 @@ Un elemento padre nunca podrá estar sobre sus elementos hijos, sin embargo los 
   left: 75px;
   z-index: -1;
 }
+
+/* Sigue en positions-examples.html */
