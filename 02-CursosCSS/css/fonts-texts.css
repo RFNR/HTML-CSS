@@ -1,4 +1,7 @@
-/* 
+/*
+
+https://uniwebsidad.com/libros/referencia-css2/font
+
   Estilos de la Fuente
 
   font-family
@@ -22,7 +25,7 @@
 }
 
 /* 
-Formato woff o woff2 - Web Open Font Format
+Formato woff o woff2 - Web Open Font Format --> se usa este formato para paginas web.
 
 font-display:
   auto - permite que el navegador utilice el método predeterminado que suele ser block
@@ -31,10 +34,16 @@ font-display:
   fallback - es una mezcla de auto y swap
   optional -ocultará el texto, luego lo cargará con la fuente alternativa y finalmente aplicará la fuente personalizada
 */
+
+/* 
+https://developer.mozilla.org/es/docs/Web/CSS/@font-face 
+https://www.kodetop.com/incluir-fuentes-en-css-con-font-face/
+https://filisantillan.com/bits/font-display/
+*/
 @font-face {
   font-family: "Chalet";
   src: url("../assets/Chalet.woff") format("woff");
-  font-display: swap;
+  font-display: swap; /* Opción recomendada. */
   /* src: url("../assets/Chalet.woff") format("woff"),
   url("../assets/Chalet.woff2") format("woff2"); */
 }
@@ -77,6 +86,23 @@ word-break
 word-spacing
 writing-mode
 */
+
+/* 
+https://uniwebsidad.com/libros/referencia-css2/text-align 
+https://uniwebsidad.com/libros/referencia-css2/text-indent
+https://uniwebsidad.com/libros/referencia-css2/text-decoration
+https://webdesign.tutsplus.com/es/tutorials/text-overflow-with-css-ellipsis--cms-36634
+https://css-tricks.com/almanac/properties/w/word-break/
+https://runebook.dev/es/docs/css/word-break
+https://developer.mozilla.org/en-US/docs/Web/CSS/word-break
+https://uniwebsidad.com/libros/referencia-css2/text-transform
+https://uniwebsidad.com/libros/referencia-css2/letter-spacing
+https://uniwebsidad.com/libros/css-avanzado/capitulo-4/propiedad-white-space
+https://uniwebsidad.com/libros/referencia-css2/word-spacing
+https://css-tricks.com/almanac/properties/w/writing-mode/
+https://developer.mozilla.org/es/docs/Web/CSS/writing-mode
+https://www.eniun.com/atributos-propiedades-textos-css/#64_Letter-spacing
+*/
 .text {
   font-size: 2rem;
   text-align: center;
@@ -114,6 +140,7 @@ writing-mode
   white-space: pre;
 }
 
+/* word spacing separa palabras y letter spacing caracteres --> RECORDAR ESTO. */
 .word-spacing {
   font-size: 2rem;
   word-spacing: 1rem;
@@ -143,3 +170,5 @@ writing-mode
   /* Support for IE. */
   font-feature-settings: "liga";
 }
+
+/* Sigue en border-outline.html */

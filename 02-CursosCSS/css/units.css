@@ -1,9 +1,14 @@
-/* 
+/*
+
+https://laurachuburu.com.ar/unidades-de-medida-css/ 
+http://dis.um.es/~lopezquesada/documentos/IES_1213/LMSGI/curso/css/css11/Paginas/medidas.html
+
 Unidades de Medida
   1) Absolutas (Su valor no cambia, son unidades del mundo real)
     pc, cm, mm, in, Q
     pt (1/72in)
     px (1/96in)
+    Estas unidades se las recomienda usar en estilos para impresion.
   2) Relativas (Su valor es relativo a un contexto)
     em, rem, ex, ch - al tamaño de la fuente
       em - basada en la anchura de la "m" de la fuente del elemento
@@ -29,7 +34,7 @@ html {
 
 body {
   background-color: blanchedalmond;
-  /* margin: 0; */
+  /* margin: 0; --> RECORDAR QUE ESTE DOCUMENTO NO TIENE LOS MARGENES RESETEADOS. */ 
 }
 
 *,
@@ -46,6 +51,12 @@ body {
   font-size: 32px;
   border: 5px solid rebeccapurple;
 }
+
+/* 
+https://cybmeta.com/em-y-rem 
+https://www.jesustovar.es/veteasabertu/diferencia-entre-las-unidades-de-medida-rem-y-em-en-css
+
+*/
 
 .ems {
   background-color: cadetblue;
@@ -77,6 +88,10 @@ body {
   font-size: 2rem;
 }
 
+/*
+ex: Basada en la altura de la “x” minúscula de la fuente del elemento (depende de la tipografía utilizada). La unidad ex es la mitad del tamaño de la fuente establecida por el navegador del usuario que por lo regular es 16px = 1em, entonces la mitad de 16px es 8, por lo que 8/16 = 0.5, por lo que 1ex es igual a .5em. Su funcionamiento es igual al em.
+*/
+
 .exs {
   background-color: cadetblue;
   font-size: 24px;
@@ -92,10 +107,17 @@ body {
   font-size: 2ex;
 }
 
+/*
+https://www.aluracursos.com/blog/guia-de-unidades-en-css --> ver ch
+Ver esta seccion en el video de Jhon Mircha --> https://www.youtube.com/watch?v=p_lT7AgpEMU&t=3s
+*/
+
 .chs {
   background-color: cadetblue;
   width: 10ch;
 }
+
+/* Ver esta seccion en el video de Jhon Mircha --> https://www.youtube.com/watch?v=p_lT7AgpEMU&t=3s */
 
 .percentages {
   background-color: darkkhaki;
@@ -124,6 +146,7 @@ body {
   /* Recuerda que la etiqueta body tiene margenes por defecto y recuerda que las barras de scroll del navegador también forman parte del viewport */
   width: 100%;
   width: 100vw;
+  /* CAMBIAR EL ORDEN DE LOS WIDTH Y OBSERVAR QUE PASA CON LA BARRA DE SCROLL HORIZONTAL. */
   height: 50vh;
   height: 100vh;
   font-size: 5vw;
@@ -137,3 +160,5 @@ body {
   width: 50vmax;
   height: 50vmin;
 }
+
+/* Sigue en variables-functions.html */

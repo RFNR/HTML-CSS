@@ -65,6 +65,8 @@ html {
   opacity: 0.75;
 }
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/resize */
+
 .contact-form textarea {
-  resize: none;
+  resize: none; /* Los textarea tiene la propiedad resize en both, lo cual rompe la maquetacion hecha de alguna manera.. por lo tanto se cambia el valor resize a none. */
 }

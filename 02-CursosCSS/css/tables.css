@@ -1,9 +1,16 @@
+/*
+https://uniwebsidad.com/libros/referencia-css2/border-collapse
+https://uniwebsidad.com/libros/referencia-css2/border-spacing
+https://uniwebsidad.com/libros/referencia-css2/empty-cells
+https://developer.mozilla.org/en-US/docs/Web/CSS/empty-cells
+*/
+
 .table {
   font-size: 3rem;
   border-collapse: collapse;
   border-collapse: separate; /* default */
-  empty-cells: hide;
   empty-cells: show; /* default */
+  empty-cells: hide;
 }
 
 table,
@@ -13,3 +20,5 @@ th {
   border-spacing: 0;
   border-spacing: 1rem;
 }
+
+/* Sigue en forms.html */

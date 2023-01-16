@@ -1,4 +1,4 @@
-img {
+img { /* Reseteo de imagenes */
   max-width: 100%;
   height: auto;
 }
@@ -8,6 +8,14 @@ img {
   width: 400px;
   height: 400px;
 }
+
+/*
+https://escss.blogspot.com/2013/12/propiedad-css-object-fit.html
+https://www.adaweb.es/propiedad-object-fit-de-css/
+https://runebook.dev/es/docs/css/object-fit
+https://neliosoftware.com/es/blog/mas-propiedades-interesantes-de-css-que-deberias-conocer/
+https://runebook.dev/es/docs/css/object-position
+*/
 
 .card img {
   background-color: blanchedalmond;
@@ -22,3 +30,5 @@ img {
   object-position: -50px center;
   object-position: 50% 50%;
 }
+
+/* Sigue en lists.html */

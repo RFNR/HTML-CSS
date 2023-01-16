@@ -1,3 +1,15 @@
+/*
+https://lenguajecss.com/css/cascada-css/css-custom-properties/
+https://ed.team/blog/las-variables-css-son-una-realidad-y-te-explico-como-usarlas
+https://developer.mozilla.org/es/docs/Web/CSS/Using_CSS_custom_properties
+https://www.neoguias.com/variables-css/#Tipos_de_variables_CSS
+https://linuxhint.com/var-function-css/
+https://runebook.dev/es/docs/css/url()
+http://w3.unpocodetodo.info/css3/calc.php#:~:text=La%20funci%C3%B3n%20calc()%20de,%2C%20duraci%C3%B3n%2C%20%C3%A1ngulo%20o%20n%C3%BAmero.
+https://programacion.net/articulo/como_utilizar_la_funcion_calc_en_css3_1416
+https://xitrus.es/blog/80/C%C3%A1lculos_en_el_CSS_con_calc()_de_CSS3
+*/
+
 :root {
   color: darkgreen;
   --default-bg-color: skyblue;
@@ -28,7 +40,7 @@ html {
 
 .custom-props-3 {
   font-size: var(--font-size);
-  border: thin solid var(--border-color);
+  border: thin solid var(--border-color); /* El --border-color esta definido en el atributo style en html */
 }
 
 .title-props {
@@ -43,8 +55,15 @@ html {
   background-color: var(--default-bg-color);
   font-size: 2rem;
   padding: var(--padding-size);
-  width: calc(var(--num-ch) + var(--padding-size) * 2);
+  width: calc(var(--num-ch) + var(--padding-size) * 2); /* Cuando se utilice la funcion calc, recordar separar cada cosa con espacios. Porque si no, no funciona. Esto estaria mal: var(--num-ch)+var(--padding-size */
 }
+
+/* 
+https://web.dev/i18n/es/min-max-clamp/ 
+https://developer.mozilla.org/es/docs/Web/CSS/min
+https://developer.mozilla.org/en-US/docs/Web/CSS/max
+https://developer.mozilla.org/en-US/docs/Web/CSS/clamp
+*/
 
 .min-max {
   background-color: var(--default-bg-color);
@@ -56,3 +75,4 @@ html {
 h1 {
   font-size: clamp(2rem, 1rem + 3vw, 3rem);
 }
+ /* Sigue en fonts-texts.html */

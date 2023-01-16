@@ -1,3 +1,15 @@
+/*
+https://uniwebsidad.com/libros/referencia-css2/list-style
+https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+https://uniwebsidad.com/libros/referencia-css2/list-style-type
+https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+https://uniwebsidad.com/libros/referencia-css2/list-style-image
+https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-image
+https://uniwebsidad.com/libros/referencia-css2/list-style-position
+https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-position
+https://cssreference.io/property/list-style-position/
+*/
+
 .list {
   list-style-type: disc; /* default */
   list-style-type: square;
@@ -12,7 +24,7 @@
   list-style-image: url("../assets/cielo.png");
   list-style-image: none; /* default */
 }
-
+/* En caso de que la imagen sea demasiado grande o no se muestre como icono, podemos usar la siguiente tecnica. */
 .list li {
   list-style-type: none;
 }
@@ -27,7 +39,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
+/*----------------------------------------------------------------------------*/
 .list-2 li {
   background-color: coral;
   list-style-position: inside;
@@ -39,6 +51,16 @@
   list-style: lower-latin url("../assets/cielo.png") outside;
   list-style: lower-latin inside;
 }
+
+/*
+https://developer.mozilla.org/es/docs/Web/CSS/column-count
+https://developer.mozilla.org/en-US/docs/Web/CSS/column-width
+https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap
+https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule
+https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-color
+https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-style
+https://developer.mozilla.org/en-US/docs/Web/CSS/column-rule-width
+*/
 
 .text-column-4 {
   list-style-position: inside;
@@ -54,3 +76,5 @@
   column-rule: thin solid gray;
   column-width: 100px; /* tamaño mínimo de anchura de las columas */
 }
+
+/* Sigue en tables.html */

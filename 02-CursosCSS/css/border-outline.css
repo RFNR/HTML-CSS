@@ -6,6 +6,12 @@
   border: thick solid red;
 }
 
+/*
+https://abalozz.es/crea-formas-con-border-radius/
+https://www.todo-argentina.net/cursos/css3/index.php
+https://code.tutsplus.com/es/tutorials/css-refreshers-borders--net-24655
+*/
+
 .border-radius {
   border-radius: 2rem;
   border-top-left-radius: 4rem;
@@ -35,6 +41,14 @@
   border-radius: 50%;
 }
 
+/*
+https://uniwebsidad.com/libros/css-avanzado/capitulo-4/propiedad-outline
+https://www.aurea.es/outline-contornos-dinamicos-en-css/
+https://creatuweb.espaciolatino.com/tutorcss3/contorno.htm
+https://twitter.com/lupitacode/status/1468400863702044672https://lenguajecss.com/css/interacciones/contornos/
+https://www.javatpoint.com/css-outline
+*/
+
 .outline {
   color: white;
   text-align: center;
@@ -47,3 +61,5 @@
   outline-offset: 3rem;
   outline-offset: -3rem;
 }
+
+/* Sigue en backgrounds.html */

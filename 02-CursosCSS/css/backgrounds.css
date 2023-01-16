@@ -1,4 +1,23 @@
 /* 
+
+https://uniwebsidad.com/libros/referencia-css2/background
+https://uniwebsidad.com/libros/referencia-css2/background-color
+https://uniwebsidad.com/libros/referencia-css2/background-image
+https://www.freecodecamp.org/espanol/news/todas-las-propiedades-background-de-css-explicadas-con-codigo-de-ejemplo/
+https://codepen.io/regardis/pen/eYpMXoZ
+https://cssreference.io/property/background-size/
+https://uniwebsidad.com/libros/referencia-css2/background-repeat
+https://uniwebsidad.com/libros/referencia-css2/background-position
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-clip
+https://cssreference.io/property/background-clip/
+https://www.jasoft.org/Blog/post/css3-propiedades-background-origin-y-background-clip
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-origin
+http://w3.unpocodetodo.info/css3/background-origin.php
+https://cssreference.io/property/background-origin/
+https://uniwebsidad.com/libros/referencia-css2/background-attachment
+https://developer.mozilla.org/es/docs/Web/CSS/background-attachment
+https://cssreference.io/property/background-attachment/
+
 background-color: define el color de fondo del elemento
 background-image: define la imagen de fondo del elemento
 background-size: define el tamaño de la imagen de fondo, primer valor x, segundo y
@@ -104,7 +123,7 @@ background-attachment: define cómo se comportará la imagen de fondo al desplaz
   width: 50%;
   height: 30vh;
   background-image: url("../assets/favicon.png"),
-    url("../assets/puesta-sol.jpg");
+    url("../assets/puesta-sol.jpg"); /* Se pueden agregar diferentes imagenes de esta manera. La primera imagen agregada es la que se muestra mas al frente. */
   background-repeat: repeat-x, no-repeat;
   background-size: 10%, cover;
 }
@@ -116,3 +135,5 @@ background-attachment: define cómo se comportará la imagen de fondo al desplaz
     url("../assets/aves.png") no-repeat center bottom,
     url("../assets/cielo.png") no-repeat center top;
 }
+
+/* Sigue en images.html */
