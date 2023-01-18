@@ -9,7 +9,7 @@ Regla CSS consta de 2 partes
 }
 */
 
-/* Son mala práctica por que son bloqueantes a la hora de que el navegador lee esta instrucción */
+/* Importar hojas de estilo externas como en este caso son mala práctica por que son bloqueantes a la hora de que el navegador lee esta instrucción. En caso de que la hoja no exista, el flujo de lectura de esta hoja de estilos no continua. */
 @import url("otro-hoja.css");
 
 h1 {
@@ -76,7 +76,7 @@ p {
 
 /* Los selectores de hermanos van a aplicar a los elementos que son hermanos y que estén por debajo del elemento de referencia. */
 .hermanos-general ~ li {
-  /* Aplica a todos lo elementos li debajo del elemento con la clase .hermanos-general. */
+  /* Aplica a todos lo elementos li debajo del elemento hermano con la clase .hermanos-general. */
   background-color: thistle;
 }
 
@@ -87,7 +87,7 @@ p {
 
 /* Selectores de atributos */
 .selectores-atributos a[href] { 
-/* Aplica a los elementos <a> que contengan el atributo href que sean hijos de un elemento con la clase selectores-atributos. */
+/* Aplica a los elementos <a> que contengan el atributo href que sean descendientes de un elemento con la clase selectores-atributos. */
   color: orangered;
 }
 
@@ -97,22 +97,30 @@ p {
 */
 
 .selectores-atributos a[target="_blank"] {
-  /* Aplica a los elementos <a> que contengan el atributo target con el valor "_blank" que sean hijos de un elemento con la clase selectores-atributos. */
-  font-weight: bold; /* https://developer.mozilla.org/es/docs/Web/CSS/font-weight */
+  /* Aplica a los elementos <a> que contengan el atributo target con el valor "_blank" que sean descendientes de un elemento con la clase selectores-atributos. */
+  font-weight: bold; /* https://uniwebsidad.com/libros/referencia-css2/font-weight
+  https://developer.mozilla.org/es/docs/Web/CSS/font-weight */
 }
 
 .selectores-atributos a[href*="jonmircha"] {
-  /* Aplica a los elementos <a> que tengan el atributo href y que en su valor contengan la cadena "jhonmircha" en cualquier parte, y que sean hijos de un elemento con la clase selectores-atributos. */
-  font-size: 24px;
+  /* Aplica a los elementos <a> que tengan el atributo href y que en su valor contengan la cadena "jhonmircha" en cualquier parte, y que sean descendientes de un elemento con la clase selectores-atributos. */
+  font-size: 30px;
 }
 
 /* Siguiendo con la logica anterior para no escribir tantos comentarios.*/
 
 /* El comodín del ^ aplica el estilo si contiene el texto en cuestión al inicio.*/
-.selectores-atributos a[href^="http://"]
+.selectores-atributos a[href^="http://"] /* Falta la S a https --> Observar bien. */
 {
   /* Modifica el subrayado, puede cambiar color, posicion, etc. En este caso lo elimina.*/
-  text-decoration: none;  /* https://developer.mozilla.org/es/docs/Web/CSS/text-decoration */
+  text-decoration: none;  
+  /* 
+  https://uniwebsidad.com/libros/referencia-css2/text-decoration
+  https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-style
+  https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-color
+  https://developer.mozilla.org/es/docs/Web/CSS/text-decoration --> El valor blink ya no funciona.. por lo tanto no usarlo.
+  https://runebook.dev/es/docs/css/text-decoration
+  */
 }
 
 /* El comodín del $ aplica el estilo si contiene el texto en cuestión al final. */
@@ -120,14 +128,17 @@ p {
   background-color: black;
 }
 
-/* El comodín del ~ aplica el estilo si contiene el texto en cuestión en una lista separada por espacios. No solo las clases se pueden agrupar como una sola cadena y separadas por espacios, hay otros atributos que pueden hacer lo mismo. Por lo tanto, si queremos seleccionar un valor de ese atributo lo haremos de esta forma. Si no comple esta sintaxis, no usarlo. */
+/* El comodín del ~ aplica el estilo si contiene el texto en cuestión en una lista separada por espacios. No solo las clases se pueden agrupar como una sola cadena y separadas por espacios, hay otros atributos que pueden tener la misma sintaxis. Por lo tanto, si queremos seleccionar un valor de ese atributo lo haremos de esta forma. Si no comple esta sintaxis, no usarlo. */
 .selectores-atributos a[class~="cursos"] {
   background-color: midnightblue;
 }
 
 /* El comodín del | aplica el estilo si contiene el texto en cuestión en una lista separada por espacios y que despues del texto en cuestión venga un guión medio - (Seguir la logica anterior). */
 .selectores-atributos a[class|="menu"] {
-  font-style: italic; /* https://www.youtube.com/watch?v=fRICVavvDSE&t=5s */
+  font-style: italic; /* 
+  Resumen del video --> usar italic cuando la fuente tenga este modo de escritura.. si no lo tiene usar oblique que mostrara la fuente normal pero inclinada. 
+  https://www.youtube.com/watch?v=fRICVavvDSE&t=5s 
+  */
 }
 
 /* Selector Universal */

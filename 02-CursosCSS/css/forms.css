@@ -25,6 +25,8 @@ html {
   width: 80%;
 }
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color */
+
 .contact-form > * {
   display: block;
   width: 100%;
@@ -70,3 +72,5 @@ html {
 .contact-form textarea {
   resize: none; /* Los textarea tiene la propiedad resize en both, lo cual rompe la maquetacion hecha de alguna manera.. por lo tanto se cambia el valor resize a none. */
 }
+
+/* Sigue en visual-effects.html */

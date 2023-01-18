@@ -1,3 +1,15 @@
+/*
+https://www.freecodecamp.org/espanol/news/aprende-la-propiedad-box-shadow-de-css-codificando-un-hermoso-boton/
+https://developer.mozilla.org/es/docs/Web/CSS/box-shadow
+https://uniwebsidad.com/libros/css-avanzado/capitulo-1/sombras
+https://www.lawebera.es/como-hacer/ejemplos-css/sombras-en-el-texto-la-propiedad-text-shadow-de-css3.php
+http://www.w3bai.com/es/css/css3_shadows.html#gsc.tab=0
+https://developer.mozilla.org/es/docs/Web/CSS/text-shadow
+https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow
+https://leonidasesteban.com/blog/drop-shadow-vs-box-shadow
+https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function/drop-shadow
+*/
+
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -28,6 +40,7 @@ html {
   box-shadow: -1rem -1rem 1rem 1rem;
   box-shadow: 1rem 1rem 1rem 1rem #0005;
   box-shadow: 1rem 1rem 1rem 1rem #f00 inset;
+  /* No escribir el valor outset que es el que viene por defecto. Solo inset. Que hace que se invierta la sombra hacia adentro. https://escss.blogspot.com/2012/03/box-shadow-css-la-sombra-fondo.html*/
   box-shadow: 1rem 1rem 2rem 0.5rem #0007;
   /* text-shadow: mov-x mov-y blur-radius color; */
   text-shadow: -1rem -1rem 0.5rem hotpink;
@@ -37,7 +50,7 @@ html {
   font-size: 2rem;
   text-align: center;
   box-shadow: 1rem 1rem 1rem 1rem #0005, 1rem 1rem 1rem 1rem #f00 inset,
-    -0.5rem -0.5rem 0.5rem 2rem hotpink;
+    -0.5rem -0.5rem 0.5rem 2rem hotpink; /* Sombras multiples. */
   text-shadow: -1rem -1rem 0.5rem navy, 1rem 1rem 0.5rem greenyellow;
 }
 
@@ -51,10 +64,11 @@ html {
   height: auto;
   /* filter: drop-shadow(mov-x mov-y blur-radius color); */
   box-shadow: 1rem 1rem 1rem 1rem #f00;
-  filter: drop-shadow(1rem 1rem 1rem orangered);
+  /* La mejor manera de aplicar el filtro drop-shadow es a imagenes png con transparencia. */
+  filter: drop-shadow(1rem 1rem 1rem orangered); /* Aqui no aplica la funcion de tener sombras multiples como en box-shadow. */
   filter: drop-shadow(1rem 1rem 1rem steelblue);
 }
-
+/* Ver toda la seccion de gradientes en el canal de Jhon MIrcha y despues ver esto https://www.youtube.com/watch?v=m30frh3KzLU*/
 .linear-gradient {
   background-image: linear-gradient(red, green);
   background-image: linear-gradient(red, green, blue);
@@ -235,10 +249,17 @@ html {
 }
 
 .donut-gradient {
-  background-image: radial-gradient(white 30%, black 31%, transparent 33%),
+  background-image: radial-gradient(white 30%, black 30% 34%, transparent 34%),
     conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%);
   border-radius: 50%;
 }
+
+/*
+https://code.tutsplus.com/es/tutorials/editando-imagenes-en-css-filtros--cms-25948
+https://blog.endeos.com/8-filtros-css-para-imagenes-que-todo-disenador-web-deberia-conocer/
+https://lenguajecss.com/css/efectos/filtros-css/
+https://web.dev/i18n/es/backdrop-filter/
+*/
 
 .card {
   border: thick solid #000;
@@ -313,6 +334,11 @@ html {
   */
   filter: invert(1);
 }
+
+/* Filtros multiples 
+
+Creo que el orden de aplicacion de filtros no importa.. practicar esto. 
+*/
 
 .filters-multiple {
   filter: blur(0.1rem) hue-rotate(270deg) opacity(0.75) invert(1);
